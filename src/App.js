@@ -12,12 +12,13 @@ function App() {
 
   function calculateChange() {
     if (inputOne > 0) {
-      if (inputTwo >= inputOne) {
+      if (Number(inputTwo) >= Number(inputOne)) {
         const amountToBeReturned = inputTwo - inputOne;
+        manageChangeToBeReturned(amountToBeReturned);
+        setMessage("Here's the breakdown of your change ");
 
         //any function to calculate the change with each note
-        manageChangeToBeReturned(amountToBeReturned);
-      } else if (inputOne > inputTwo) {
+      } else if (Number(inputOne) > Number(inputTwo)) {
         setMessage("quick !! the dishes are waiting for you ");
       }
     } else {
@@ -36,9 +37,9 @@ function App() {
 
       // rendering the cash amount in html
     }
-    const ArrayOfNotes = Object.values(d);
+    const arrayOfNotes = Object.values(d);
 
-    setNumberOfNotes(ArrayOfNotes);
+    setNumberOfNotes(arrayOfNotes);
   }
 
   return (
@@ -57,7 +58,7 @@ function App() {
           <h3>Bill Amount</h3>
           <input
             onChange={(event) => setInputOne(event.target.value)}
-            type="text
+            type="number
           "
           />
         </div>
@@ -69,7 +70,7 @@ function App() {
             <h3>Cash Given</h3>
             <input
               onChange={(event) => setinputTwo(event.target.value)}
-              type="text"
+              type="numbert"
             />
           </div>
         )}

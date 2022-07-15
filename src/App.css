@@ -1,5 +1,10 @@
 @import "https://fonts.googleapis.com/css?family=Space+Mono";
 
+/* get scroll functionality without the ugly scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background-color: black;
   color: #ffdb58;
@@ -7,7 +12,7 @@ body {
   width: 90%;
   margin: auto;
   border: 2px solid #ffdb58;
-  height: 100vh;
+  height: fit-content;
 }
 
 th,
@@ -34,11 +39,7 @@ td {
   padding: 1rem;
 }
 .input-container {
-  display: flex;
-
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  display: block;
   margin: 1rem;
 }
 input {
@@ -80,4 +81,14 @@ button:hover {
 footer > h3 {
   opacity: 0.8;
   text-align: center;
+}
+
+@media screen and (min-width: 640px) {
+  .input-container {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
