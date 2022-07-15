@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+this app takes an input for bill amount and one for cash the person gives
+then it calculates how much money we owe to the customer.
+
+
+
+
+#Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
