@@ -1,38 +1,83 @@
-.App {
+@import "https://fonts.googleapis.com/css?family=Space+Mono";
+
+body {
+  background-color: black;
+  color: #ffdb58;
+  font-family: "Space Mono", monospace;
+  width: 90%;
+  margin: auto;
+  border: 2px solid #ffdb58;
+  height: 100vh;
+}
+
+th,
+td {
+  border: 0.6px solid #ffdb58;
+  width: 0%;
+  border-collapse: collapse;
+  padding: 0.4rem;
+  opacity: 0.8;
+}
+
+.header-container,
+.input-container {
   text-align: center;
+  border: 0.5px solid #ffdb58;
+  opacity: 0.8;
+  padding: 1rem;
+}
+.header-container > p {
+  opacity: 0.8;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-container > * {
+  padding: 1rem;
+}
+.input-container {
+  display: flex;
+
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem;
+}
+input {
+  background-color: black;
+  border: 1px solid #ffdb58;
+  color: #ffdb58;
+  padding: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  opacity: 0.8;
+  display: block;
+  margin: auto;
+  padding: 0.1rem;
+  width: 7rem;
+  height: 3rem;
+  color: #ffdb58;
+  background-color: black;
+  border: 0.5px solid #ffdb58;
+}
+button:hover {
+  background-color: #ffdb58;
+  color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cash-table {
+  opacity: 0.8;
+  padding: 1rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.cash-table > * {
+  margin: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer > h3 {
+  opacity: 0.8;
+  text-align: center;
 }
